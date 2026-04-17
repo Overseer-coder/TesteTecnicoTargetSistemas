@@ -1,0 +1,40 @@
+1) 77
+
+2) a) 1, 3, 5, 7, *9*
+b) 2, 4, 8, 16, 32, 64, *128*
+c) 0, 1, 4, 9, 16, 25, 36, *49*
+d) 4, 16, 36, 64, *100*
+e) 1, 1, 2, 3, 5, 8, *13*
+f) 2, 10, 12, 16, 17, 18, 19, 
+
+4) 
+SELECT Estado.Codigo, 
+       Cliente.RazaoSocial, 
+       Telefone.Numero
+FROM Cliente
+INNER JOIN Estado ON Estado.IdEstado = Cliente.IdEstado
+INNER JOIN Telefone ON Telefone.IdCliente = Cliente.IdCliente
+WHERE Estado.Codigo = 'SP'
+
+5) O caminhão estará mais próximo de Ribeirão Preto
+
+Raciocínio:
+
+Carro = 90km/h = 1,5km/m
+Caminhão = 80km/h ~ 1,3km/m
+
+Considere que o caminhão gaste 1 minuto no pedágio, e o carro, por sua vez, 6 minutos
+
+Considerando que ambos passarão em todos os pedágios, antes de se cruzarem, temos:
+
+Carro em 1h percorreria 90km, mas perderá 18 minutos por ter passado por 3 pedágios,
+perdendo 27km de distância, ou seja, em 1h ele percorreu 63km
+
+Caminhão em 1h percorreria 80km, mas perderá 3 minutos por ter passado por 3 pedágios,
+perdendo, aproximadamente, 4km de distância, ou seja, em 1h ele percorreu 76km
+
+Com isso já temos que o caminhão, com 1h, já está mais perto de Ribeirão Preto, pois percorreu 76km de 125km,
+restando 49km em direção a Ribeirão Preto. O carro, saindo de Ribeirão Preto, já percorreu 63km,
+ou seja, já está mais longe.
+
+Como em 1h o caminhão já está mais próximo, quando se cruzarem esta situação prevalecerá.

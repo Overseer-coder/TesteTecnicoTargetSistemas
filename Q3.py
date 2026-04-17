@@ -7,7 +7,7 @@ def recuperar_menor_valor(faturamento):
 def filtrar_sem_faturamento(faturamento):
     return list(filter(lambda valor : valor > 0, faturamento))
 
-def filtrar_dias_maiores_media(faturamento, media):
+def filtrar_dias_maiores_media(faturamento_filtrado, media):
     return list(filter(lambda valor: valor > media, faturamento_filtrado ))
 
 if __name__ == "__main__":
